@@ -1,0 +1,181 @@
+@font-face {
+  font-family: stanley;
+  src: url(StanleySmith-Bratalic.woff);
+}
+
+body{
+  font-family: 'stanley', sans-serif;
+  width: 100%;
+  background: url(./img/bg.png) right bottom no-repeat;
+}
+
+#menu{
+    font-size : 20px;
+    position:fixed;
+    width:100%;
+    top:10px;
+}
+
+#menu ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    height:30px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#menu ul li{
+       text-align:center;
+}
+
+#menu ul li:first-of-type{
+    font-size:30px;
+    font-style:italic;
+    line-height:20px;
+}
+
+#menu ul li a {
+    text-decoration : none;
+    color : #000;
+}
+
+#menu ul li:hover {
+    border-bottom: 7px solid #000;
+}
+
+#menu ul li:hover a {
+    //text-decoration:underline;
+}
+
+
+#works{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.work{
+  position: relative;
+  overflow: hidden;
+}
+
+#works a{
+  text-decoration: none;
+  color: black;
+}
+
+h1  {
+  width: 50%;
+
+}
+
+.Sinfo{
+  text-align: right;
+  margin: 1%;
+}
+
+.Sinfo a {
+  text-decoration: none;
+}
+
+.Sinfo span{
+  margin-right: 5%
+}
+
+.wimg{
+  overflow: hidden;
+  height: 500px;
+  display: grid;
+  align-content: space-evenly;
+  align-items: stretch;
+  justify-items: start;
+}
+
+.wimg img{
+  width: 75%;
+  display: grid;
+  justify-self: center;
+  align-self: end;
+  place-self: center;
+}
+
+h2.wtitle{
+  font-style: italic;
+  color: blue;
+}
+
+.winfo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 33%;
+  opacity: 0;
+  /*transition: all 0.3s ease;
+  transform: scale(2);*/
+}
+
+.work:hover .winfo{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.winfo .wdate{
+  color: red;
+  font-weight: lighter;
+}
+
+#gal {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+#gal .simg{
+  height: 150px;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+#gal .simg img{
+  width: 200%;
+}
+
+
+.fullsize{
+  grid-column: span 3;
+  height: auto!important;
+  width: auto;
+}
+
+.fullsize img{
+  height: 100vw!important;
+  width: 100%!important;
+}
+
+/*.Pinfo{
+  position: relative;
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+}
+
+.Pinfo span{
+  position: relative;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+*/
