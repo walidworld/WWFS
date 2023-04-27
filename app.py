@@ -3,16 +3,17 @@ from flask_flatpages import FlatPages
 from flask import render_template , send_from_directory
 import os
 
-
 FLATPAGES_EXTENSION = '.md'
 #FLATPAGES_MARKDOWN_EXTENSIONS = ['extra']
 FLATPAGES_AUTO_RELOAD = True
 
 app = Flask(__name__)
+app.config['APPLICATION_ROOT'] = '/wwfs'
 app.config.from_object(__name__)
 pages = FlatPages(app)
 
 pages.get('foo')
+application = app
 
 def Liste_cat():
     articles = (p for p in pages if 'published' in p.meta)
